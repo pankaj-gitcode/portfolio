@@ -1,0 +1,584 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: box-border;
+  font-family: poppins, sans-serif, ubuntu;
+}
+html,
+body {
+  background-color: #000;
+  color: #fff;
+}
+/* *****************navigation bar styling****************** */
+nav {
+  width: 100%;
+}
+nav h1 {
+  font-size: 30px;
+  padding-left: 20px;
+}
+nav h1 span {
+  color: red;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 20px 30px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+#close,
+#bar {
+  display: none;
+}
+
+/* *******************Landing Page****************** */
+#home {
+  width: 100%;
+  height: 100vh;
+}
+
+.profile {
+  background-image: url(./me_bg_desktop.jpeg);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-position: right;
+  height: 20vh;
+  /* width: 200px; */
+  /* background-color: #414141; */
+  padding: 280px 10%;
+  opacity: 0.8;
+}
+/*Profile title styling*/
+#profile-title {
+  font-size: 3vh;
+}
+/*Name and from styling*/
+.profile h1 {
+  padding-top: 20px;
+  font-size: 8vh;
+}
+/*make red the title part*/
+#title {
+  color: red;
+}
+/*spacing the small element 'From Bharat'*/
+#space {
+  position: absolute;
+  margin-left: 60px;
+}
+
+nav ul li a {
+  position: relative;
+  /* background-color: green; */
+}
+
+nav ul li a::after {
+  content: ""; /*used ::after so given psedu empty element*/
+  position: absolute;
+  background-color: red;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+/* ********************* *About Me* **************************** */
+#aboutme {
+  width: 100%;
+  height: 87vh;
+  /* Top spacing from Home screen */
+  /* background-color: royalblue; */
+  margin-top: 9vh;
+}
+/* use flex box to separate the image and aboutMe sections */
+.container-aboutme {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  /* background-color: yellow; */
+}
+/* use Flex Box to align skills sections */
+#skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+/* styling AboutMe Image */
+.container-aboutme img {
+  width: 20%;
+  height: 20%;
+  /* aligning same space from left in AboutMe section with Home section  */
+  padding: 0 10%;
+  border-radius: 20%;
+}
+/* make div with calss name=container-aboutme as parent of child div #aboutme-details */
+.container-aboutme {
+  position: relative;
+  /* background-color: yellow; */
+}
+/*set the position as absolute and align the spacing from left */
+#aboutme-details {
+  flex-basis: 60%;
+  width: 60%;
+  position: absolute;
+  /* background-color: green; */
+  top: 10px;
+  left: 32%;
+}
+/*spacing around <p> */
+#aboutme-details #aboutme-introduction {
+  padding: 20px 30px 30px 0;
+  text-align: justify;
+}
+/*remove underline and style the color of <ul> lists*/
+#skills li p {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: bold;
+  /*to make underline animation we need to make <p> tag relative and set the underline by making again
+  <p> tag absolute*/
+  position: relative;
+}
+#skills li p::after {
+  position: absolute;
+  content: "";
+  background-color: red;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s ease;
+}
+#skills li p:hover::after {
+  width: 100%;
+}
+#skills {
+  cursor: pointer;
+}
+
+/* .....skill detail section.... */
+#skill,
+#experience,
+#education {
+  /* spacing from top of all skill sets */
+  margin: 15px 0 0 10px;
+  line-height: 22px;
+}
+/* spacing after <h5><p> */
+#skill p,
+#experience p,
+#education p {
+  padding-bottom: 8px;
+}
+
+/* hide all skill details till the link will be clicked by JS script */
+.skillSet {
+  display: none;
+}
+/* unhide only one so that in front something visible */
+.active {
+  display: block;
+}
+
+/* ****************** *My Services* ***************** */
+/* set width & create some space from up,bottom and left & right of parent <div> */
+#services {
+  /* width: 100%; */
+  padding: 2% 10%;
+  /* height: 100vh; */
+}
+/* use grid to create 4 boxes each of 1fr with some width */
+#service-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin-top: 20px;
+}
+/* style each boxe with color and padding */
+.service-box {
+  background-color: #424242;
+  border-radius: 5px;
+  padding: 10px 10%;
+
+  /*create a transition effect*/
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+.service-box:hover {
+  transform: translateY(-10px);
+  background-color: #2d0202;
+}
+/*styling <icons>, <h2> & <p> tags*/
+.service-icons {
+  padding: 20px 0;
+  font-size: 20px;
+}
+.service-h2 {
+  font-size: 20px;
+}
+.service-p {
+  font-size: 12.9px;
+  padding: 10px 0;
+  text-align: justify;
+}
+
+/* ****************** *My Work* ***************** */
+
+#mywork {
+  padding: 50px 10%;
+}
+/* #mywork-heading {
+  margin-bottom: 50px 0;
+} */
+
+/*create grid boxes*/
+#mywork-container {
+  display: grid;
+  /* grid-template-columns: 250px 250px 250px; */
+  grid-template-columns: repeat(3, 250px);
+  grid-gap: 20px;
+
+  margin-top: 20px;
+  /* background-color: red; */
+}
+/*setting image sizes*/
+.mywork-image {
+  /*below sizes rule till border-radius will set the size aligned with parent <div> container box*/
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/*set the mywork-box <div>*/
+.mywork-boxes {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+/*set the mywork-label class <div> box containing <h3,p,anchor> tags*/
+.mywork-label {
+  /*sizes should be same as per the <div .mywork-boxes which is relative>*/
+  width: 100%;
+  height: 100%;
+  /*shift to left and bottom so that it takes the actual size of image with absolute position*/
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /*using flex column to align all the items vertically*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /*use gradient color with some opacity*/
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+/*create a hover effect to slide up down the details*/
+.mywork-label:hover {
+  height: 0;
+}
+/*create a hover Zoom-In effect to image*/
+.mywork-boxes:hover img {
+  transform: scale(1.2);
+}
+/*set the position,fonts of <h3 heading, p-work details & anchor tag-icon spacing>*/
+.mywork-h3 {
+  font-weight: 600;
+}
+.mywork-p {
+  margin: 20px;
+  font-size: 12.8px;
+}
+.mywork-icon {
+  /* margin: 20px; */
+  font-size: 18px;
+  /*create a white circle around the link*/
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #ff004f;
+  text-align: center;
+  /* text-decoration: none; */
+}
+.mywork-icon i {
+  padding-top: 5px;
+}
+
+/* ****************** *Contact Me* ***************** */
+#contactme {
+  margin: 50px 10%;
+  color: #ababab;
+}
+/*set grid to separate LHS & RHS <div>*/
+#contactme-container {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-gap: 10px;
+}
+/*align items inside the LHS & RHS divs*/
+.contactme-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 25px;
+}
+/* -----LHS------ */
+/* set font-size, paddig of each elements*/
+#contactme-title {
+  padding-bottom: 20px;
+}
+.contactme-para {
+  font-size: 12px;
+  padding: 10px 0;
+}
+/*icons spacing for mail & phone*/
+.fa-paper-plane,
+.fa-phone {
+  padding-right: 5px;
+  background-color: #0000;
+  color: #ff004f;
+}
+/*social handles styling*/
+#contactme-handlers {
+  margin: 10px 0 20px 0;
+}
+.contactme-sites {
+  padding-right: 8px;
+  background-color: #000;
+  color: #4c4848;
+}
+/*button styling*/
+.btn {
+  padding: 10px 20px;
+  background-color: #ff004f;
+  border-radius: 10px;
+  color: #ababab;
+}
+/* -----RHS----- */
+.contactme-textbox {
+  margin-bottom: 20px;
+  padding: 10px 100% 10px 6px;
+  background-color: #ababab;
+  /* color: #fff; */
+  border-radius: 6px;
+  border: none;
+}
+
+/* ***************** Copyright ********************* */
+#copyright p {
+  padding: 20px 0 10px 0;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* --------------- *Media Query for small Screen* --------------- */
+@media screen and (max-width: 800px) {
+  /*hamburger menu in column*/
+  nav ul {
+    background-color: rgb(35, 2, 2);
+    position: absolute;
+    width: 50%;
+    height: 50vh;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  /*hide the above hamburger menu*/
+  #lists {
+    display: none;
+  }
+  .profile {
+    background-image: url(./my_image_for_mobile.JPG);
+    /* background-repeat: no-repeat; */
+    background-position-x: left;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 20vh;
+    /* background: url(./my_image_for_mobile.JPG) no-repeat left fixed; */
+  }
+
+  /*profile title styling*/
+  .profile p {
+    /*if absolute has not been given then the margin-top space will shift the <h1> tag elements*/
+    position: absolute;
+    /* background-color: yellow; */
+    margin-top: 130px;
+  }
+  /*Profile-name styling*/
+  .profile-name {
+    font-size: 22px;
+    margin-top: 140px;
+  }
+  /*Profile title styling*/
+  #profile-title {
+    font-size: 2vh;
+  }
+  /*Name and from styling*/
+  .profile h1 {
+    font-size: 4vh;
+  }
+
+  /* --------------------*About Me*-------------------- */
+
+  .container-aboutme {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+  }
+  /* aboutme image styling */
+  .container-aboutme img {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    padding-bottom: 10px;
+  }
+  /* div contains texts and skills */
+  /* to align items(<h1>, <p>, and all sub items<h5>& <p>)under About Me the parent <div #aboutme> has to
+  be postioned relative so that it's child(#about-details) could get the enough space in left  */
+  #aboutme {
+    position: relative;
+    /* background-color: yellow; */
+  }
+  /* style & align vertically all the <h1>About Me, <p> the details of about me, and skills with position
+  absolute of it's parent div #aboutme */
+  #aboutme-details {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: center; */
+    /* background-color: red; */
+    margin-top: 30%;
+    width: 80vw;
+    position: absolute;
+    left: 10px;
+  }
+  /* padding space top and left for "About Me <h1>" tag */
+  #aboutme-details h1 {
+    align-items: center;
+    /* background-color: green; */
+    padding: 20px 0 0 100px;
+  }
+  /* to fix the spacing & alignment of aboutme details and left and right */
+  #aboutme-introduction {
+    width: 80vw;
+    /* background-color: green; */
+    margin-left: 60px;
+    text-align: justify;
+  }
+  /*shifting <ul> to center*/
+  #skills {
+    padding-left: 30%;
+  }
+  .skillSet {
+    padding-left: 20%;
+  }
+  /* make small font and give some padding */
+  #skills li p {
+    font-size: 3.5vw;
+    padding-left: 25px;
+    align-content: center;
+  }
+  #skills li p::after {
+    content: "";
+    position: absolute;
+    background: rgb(204, 13, 13);
+    width: 0;
+    left: 26px;
+    right: 0;
+    height: 2px;
+    transition: width 0.5s ease;
+  }
+  #skills li p:hover::after {
+    /* width: 90%; */
+    width: auto;
+  }
+
+  /* -------------------- *My Services* -------------------- */
+  /*spacing between screen About-Me &  My Services*/
+  #services {
+    /* margin: 200px 0; */
+    margin-top: 90%;
+    height: 100vh;
+  }
+  /*shifting <h1> My Services to center*/
+  #service-h1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  /*shifting box container from left*/
+  #service-container {
+    margin-left: 40px;
+  }
+  /*making all the boxes span starts from column-1 & ends to column-4 give boxes look vertically order*/
+  .service-box {
+    grid-column: 1/4 span;
+    width: 80%;
+    /* padding-left: 30%; */
+  }
+
+  /* ------------------- *My Work* -------------------- */
+
+  /*spacing between My Work & services screen*/
+  #mywork {
+    margin: 70% 10% 20% 10%;
+  }
+  #mywork-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  /*use grid column size to adjust with screen size*/
+  #mywork-container {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+  }
+  /*used span to start 1st box from 1st column and ends till 3rd column to apppear vertically in one column in small screen*/
+  .mywork-boxes {
+    grid-column: 1/3 span;
+  }
+  /* -------------------- *Contact Me* -------------------- */
+  /*create a span for div boxs with class name contactme-box*/
+  .contactme-box {
+    grid-column: 1/1 span;
+  }
+  /* ----RHS: set the font size and padding---- */
+  .contactme-textbox {
+    /*set the length of text boxes setting padding-right*/
+    padding-right: 38%;
+  }
+  /*set the font size <p> tag for Email & phone no.*/
+  .contactme-para {
+    font-size: 15px;
+  }
+  #contactme-button-cv {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/002ffd557f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ************navigation Bar************** -->
+    <nav>
+      <div class="container">
+        <h1>Pankaj <span>Aditya</span></h1>
+        <ul id="lists">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li>
+            <i
+              class="fa-solid fa-rectangle-xmark"
+              id="close"
+              onclick="closeMenu()"
+            ></i>
+          </li>
+        </ul>
+        <i class="fa-solid fa-bars" id="bar" onclick="hamburger()"></i>
+      </div>
+    </nav>
+    <!-- ********************Landing Page | Home Page****************** -->
+    <div id="home">
+      <div id="profile-container">
+        <div class="profile">
+          <p id="profile-title">Web Developer</p>
+          <h1 class="profile-name">
+            Pankaj <span id="title">Aditya</span><br /><span id="space"
+              >From Bharat</span
+            >
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- *********************** *About Me* ***************************** -->
+    <div id="aboutme">
+      <!-- contains image & About-me <h1> elements, <p> & <ul> lists -->
+      <div class="container-aboutme">
+        <img src="./about_me_img.jpeg" alt="pankaj" />
+        <!-- below div containes <h1>Abour-Me, <p>details & <ul> lists -->
+        <div id="aboutme-details">
+          <h1>About Me</h1>
+          <p id="aboutme-introduction">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, id
+            aperiam ducimus culpa eos nulla! Molestias tempore odit ab ratione
+            eligendi, et sint explicabo ducimus expedita sed quidem ipsa, iste
+            dicta officia. aperiam ducimus culpa eos nulla! Molestias tempore
+            odit ab ratione eligendi, et sint explicabo ducimus expedita sed
+            quidem ipsa, iste dicta officia. aperiam ducimus culpa eos nulla!
+            Molestias tempore odit ab ratione eligendi, et sint explicabo
+            ducimus expedita sed quidem ipsa, iste dicta officia.
+          </p>
+          <ul id="skills">
+            <li><p onclick="skillFunc('skill')">Skills</p></li>
+            <li><p onclick="skillFunc('experience')">Experience</p></li>
+            <li>
+              <p onclick="skillFunc('education')">Education/Certifications</p>
+            </li>
+          </ul>
+          <!-- details of skills, Experience & Education/cert. -->
+          <div id="skill" class="skillSet active">
+            <h5>Web Application Design</h5>
+            <p>
+              Proficient in designing engaging and user-friendly web
+              applications.
+            </p>
+            <h5>Docker Deployment</h5>
+            <p>
+              Proficient in containerization with Docker and efficient
+              deployment strategies.
+            </p>
+            <h5>Honeypot Deployment</h5>
+            <p>
+              Experienced in setting up and managing honeypots for enhanced
+              security.
+            </p>
+            <h5>Cloud Infrastructure</h5>
+            <p>
+              Skilled in AWS server configuration and Azure security rule
+              implementation.
+            </p>
+          </div>
+
+          <div id="experience" class="skillSet">
+            <h5>2016-2021</h5>
+            <p>Systems Engineer at First American India</p>
+          </div>
+
+          <div id="education" class="skillSet">
+            <h5>2021-2022 (Certification)</h5>
+            <p>
+              Cyber Security and Cyber Defence from IIT-Kanpur <br />
+              (Indian Institute of Technology)
+            </p>
+            <h5>2011-2015 (Bachelore degree)</h5>
+            <p>
+              BE in ISE from Acharya Institute of Technology, Bangalore <br />
+              (Bachelore of Engineering in Information Science of Engineering)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ************** My Services ******************* -->
+    <div id="services">
+      <h1 id="service-h1">My Services</h1>
+      <div id="service-container">
+        <div class="service-box">
+          <i class="fa-solid fa-code service-icons"></i>
+          <h2 class="service-h2">Website Design</h2>
+          <p class="service-p">
+            Leverage your web application design skills to offer a comprehensive
+            website design package for small businesses or individuals looking
+            to establish an online presence.
+          </p>
+        </div>
+
+        <div class="service-box">
+          <i class="fa-brands fa-docker service-icons"></i>
+          <h2 class="service-h2">Dockerize Existing Applications</h2>
+          <p class="service-p">
+            Help businesses containerize their existing applications, making
+            them more portable, scalable, and easier to manage using Docker
+          </p>
+        </div>
+
+        <div class="service-box">
+          <i class="fa-solid fa-building-shield service-icons"></i>
+          <h2 class="service-h2">Honeypot Setup and Security Audit</h2>
+          <p class="service-p">
+            Offer honeypot deployment services to organizations looking to
+            enhance their cybersecurity. Conduct a security audit and provide
+            recommendations based on honeypot data
+          </p>
+        </div>
+
+        <div class="service-box">
+          <i class="fa-solid fa-laptop-code service-icons"></i>
+          <h2 class="service-h2">Cloud Infrastructure Assessment</h2>
+          <p class="service-p">
+            Assist businesses in assessing their current cloud infrastructure
+            (AWS, Azure, etc.) for security and efficiency. Provide
+            recommendations for optimization
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ************** My Work ******************* -->
+    <div id="mywork">
+      <h1 id="mywork-heading">My Work</h1>
+
+      <div id="mywork-container">
+        <div class="mywork-boxes">
+          <img src="./work-1.png" alt="" class="mywork-image" />
+          <div class="mywork-label">
+            <h3 class="mywork-h3">Work-1</h3>
+            <p class="mywork-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              repellendus ad exercitationem, quod obcaecati debitis ex earum
+              quibusdam magni autem nam odit ipsum vitae incidunt consequatur
+              temporibus illo eveniet corporis.
+            </p>
+            <a href="#" alt="" class="mywork-icon"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="mywork-boxes">
+          <img src="./work-2.png" alt="" class="mywork-image" />
+          <div class="mywork-label">
+            <h3 class="mywork-h3">Work-2</h3>
+            <p class="mywork-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              repellendus ad exercitationem, quod obcaecati debitis ex earum
+              quibusdam magni autem nam odit ipsum vitae incidunt consequatur
+              temporibus illo eveniet corporis.
+            </p>
+            <a href="#" alt="" class="mywork-icon"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="mywork-boxes">
+          <img src="./work-3.png" alt="" class="mywork-image" />
+          <div class="mywork-label">
+            <h3 class="mywork-h3">Work-3</h3>
+            <p class="mywork-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              repellendus ad exercitationem, quod obcaecati debitis ex earum
+              quibusdam magni autem nam odit ipsum vitae incidunt consequatur
+              temporibus illo eveniet corporis.
+            </p>
+            <a href="#" alt="" class="mywork-icon"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ********************** *Contact Me* ************************* -->
+    <div id="contactme">
+      <div id="contactme-container">
+        <!-- **** LHS **** -->
+        <!-- ----contact emails,phone--- -->
+        <div class="contactme-box">
+          <h1 id="contactme-title">Contact Me</h1>
+          <p class="contactme-para">
+            <i class="fa-solid fa-paper-plane"></i> pankaj.aditya@yahoo.com
+          </p>
+          <p class="contactme-para">
+            <i class="fa-solid fa-phone"></i> (+91) 8147250056
+          </p>
+          <!-- -----social Handles----->
+          <div id="contactme-handlers">
+            <a
+              href="https://linkedin.com"
+              class="contactme-sites"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://instagram.com"
+              class="contactme-sites"
+              target="_blank"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+            <a
+              href="https://twitter.com"
+              class="contactme-sites"
+              target="_blank"
+              ><i class="fa-brands fa-square-twitter"></i
+            ></a>
+          </div>
+          <!-- ------cv button----- -->
+          <div id="contactme-cv">
+            <button class="btn" id="contactme-button-cv">
+              Download CV <i class="fa-solid fa-download"></i>
+            </button>
+          </div>
+        </div>
+        <!-- ***** RHS ***** -->
+        <div class="contactme-box">
+          <!-- -----text & textarea boxes----- -->
+          <input
+            type="text"
+            name="name"
+            class="contactme-textbox"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            class="contactme-textbox"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            type="Your Message"
+            name="message"
+            rows="10"
+            cols="30"
+            placeholder="Your Message"
+            class="contactme-textbox"
+          ></textarea>
+          <!-- -----submit Button div----- -->
+          <div id="contactme-submit">
+            <button class="btn" id="contactme-text-button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ********************* Copyright *********************** -->
+    <div id="copyright">
+      <p>&copy; Pankaj Aditya | All right reserved &reg;</p>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
